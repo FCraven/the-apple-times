@@ -14,7 +14,7 @@ const mobileMenuButtons = [
   },
   {
     text: 'Popular',
-    icon: faStar,
+    icon: faStar
   },
   {
     text: 'Bookmarks',
