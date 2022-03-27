@@ -29,7 +29,7 @@ const mobileMenuButtons = [
 const MobileMenu =()=> {
 
   return (
-    <nav className='h-full w-full flex justify-around items-center bg-transparent backdrop-blur-md dark:bg-slate-900'>
+    <nav className='h-full w-full flex justify-around items-center bg-slate-50 backdrop-blur-md dark:bg-slate-900'>
 
       { mobileMenuButtons.map((el,index)=> <MobileMenuButton key={index} text={el.text} icon={el.icon} /> )}
 
