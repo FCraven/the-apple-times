@@ -5,7 +5,7 @@ import { Bookmarks, Header,Popular, Search, Sections, Today } from './components
 
 function App() {
   return (
-    <div className="App relative mx-6 mb-28 mt-4">
+    <div className="App relative mx-6 mb-28 mt-4 dark:bg-black">
       <Header />
       <Routes>
         <Route path='/' element={<Today />}/>
