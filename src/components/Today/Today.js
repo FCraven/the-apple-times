@@ -49,16 +49,18 @@ const Today =()=> {
           </nav>
 
         </li>
-        { articles.map((el,index)=> {
-          return (
-            <li key={index} className='flex items-center border-b border-slate-500 my-2 '>
-              <div className='px-2 pb-2'>
-                  <h3 className='text-lg font-black dark:text-red-100'>{el.title}</h3>
-              </div>
-              <img src={el.multimedia? el.multimedia[2].url : ''} alt="" className='rounded-lg h-24 w-24 ' />
-            </li>
-          )
-        }).slice(1)}
+        {
+          articles.slice(1).map((el,index)=> {
+            return (
+              <li key={index} className='flex items-center border-b border-slate-500 my-2 '>
+                <div className='px-2 pb-2'>
+                    <h3 className='text-lg font-black dark:text-red-100'>{el.title}</h3>
+                </div>
+                <img src={el.multimedia? el.multimedia[2].url : ''} alt="" className='rounded-lg h-24 w-24 ' />
+              </li>
+            )
+          })
+        }
       </ul>
     </section>
 
