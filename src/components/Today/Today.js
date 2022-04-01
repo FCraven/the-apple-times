@@ -52,7 +52,7 @@ const Today =()=> {
         {
           articles.slice(1).map((el,index)=> {
             return (
-              <li key={index} className='flex items-center border-b border-slate-500 my-2 '>
+              <li key={index} className='flex items-center justify-between border-b border-slate-500 my-2 '>
                 <div className='px-2 pb-2'>
                     <h3 className='text-lg font-black dark:text-red-100'>{el.title}</h3>
                 </div>
