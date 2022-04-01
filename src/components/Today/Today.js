@@ -45,7 +45,7 @@ const Today =()=> {
           </hgroup>
           <nav className='h-10 border-t flex items-center justify-between rounded-b-lg'>
             <NavLink to={'/'} className='flex items-center justify-center rounded-full bg-slate-500 px-4 mx-3 text-white text-md font-black'>{`More coverage >`}</NavLink>
-            <FontAwesomeIcon icon={faEllipsis} size='xl' className='text-white px-4'/>
+            <FontAwesomeIcon icon={faEllipsis} size='xl' className='dark:text-white px-4'/>
           </nav>
 
         </li>
