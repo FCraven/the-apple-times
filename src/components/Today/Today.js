@@ -25,27 +25,41 @@ const Today =()=> {
   const mainHeadline = articles[0];
 
   console.log(mainHeadline)
+
+
+
   return (
     <section className='block'>
       <h2 className='font-black bold text-3xl text-red-500 py-2'>Top Stories</h2>
       <ul>
         {/* headline */}
-        <li className='w-full flex flex-col bg-white dark:bg-slate-800 t rounded-xl '>
-          <img className='rounded-t-xl' src={mainHeadline?.multimedia[1]?.url} alt="" />
-          <hgroup className='p-4'>
-            <p className='text-medium font-extrabold text-blue-600 dark:text-yellow-600'>
-              {mainHeadline?.section.toUpperCase()}
-            </p>
-            <h1 className='text-3xl dark:text-slate-50 font-extrabold py-1'>
-              {mainHeadline?.title}
-            </h1>
-            <h3 className='py-2 text-lg text-slate-500 dark:text-slate-100 font-light'>
-              {mainHeadline?.abstract}
-            </h3>
-          </hgroup>
+        <li className='w-full flex flex-col bg-white dark:bg-slate-800 t rounded-xl'>
+          
+          <div onClick={()=> console.log('clicked article')}>
+            <img className='rounded-t-xl' src={mainHeadline?.multimedia[1]?.url} alt="" />
+            <hgroup className='p-4'>
+              <p className='text-medium font-extrabold text-blue-600 dark:text-yellow-600'>
+                {mainHeadline?.section.toUpperCase()}
+              </p>
+              <h1 className='text-3xl dark:text-slate-50 font-extrabold py-1'>
+                {mainHeadline?.title}
+              </h1>
+              <h3 className='py-2 text-lg text-slate-500 dark:text-slate-100 font-light'>
+                {mainHeadline?.abstract}
+              </h3>
+            </hgroup>
+          </div>
+
           <nav className='h-10 border-t flex items-center justify-between rounded-b-lg'>
-            <NavLink to={'/'} className='flex items-center justify-center rounded-full bg-slate-500 px-4 mx-3 text-white text-md font-black'>{`More coverage >`}</NavLink>
-            <FontAwesomeIcon icon={faEllipsis} size='xl' className='dark:text-white px-4'/>
+            <NavLink  to={'/'}
+                      onClick={()=> console.log(mainHeadline.des_facet[0])}
+                      className='flex items-center justify-center rounded-full bg-slate-500 px-4 mx-3 text-white text-md font-black'>
+              {`More coverage >`}
+            </NavLink>
+            <FontAwesomeIcon  icon={faEllipsis}
+                              size='xl'
+                              className='dark:text-white px-4'
+                              onClick={()=> console.log('clicked ellipsis')}/>
           </nav>
 
         </li>
