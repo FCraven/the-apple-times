@@ -34,7 +34,7 @@ const Today =()=> {
       <ul>
         {/* headline */}
         <li className='w-full flex flex-col bg-white dark:bg-slate-800 t rounded-xl'>
-          
+
           <div onClick={()=> console.log('clicked article')}>
             <img className='rounded-t-xl' src={mainHeadline?.multimedia[1]?.url} alt="" />
             <hgroup className='p-4'>
@@ -51,8 +51,8 @@ const Today =()=> {
           </div>
 
           <nav className='h-10 border-t flex items-center justify-between rounded-b-lg'>
-            <NavLink  to={'/'}
-                      onClick={()=> console.log(mainHeadline.des_facet[0])}
+            <NavLink  to={`/`}
+                      onClick={()=> console.log(mainHeadline.des_facet)}
                       className='flex items-center justify-center rounded-full bg-slate-500 px-4 mx-3 text-white text-md font-black'>
               {`More coverage >`}
             </NavLink>
