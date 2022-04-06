@@ -68,18 +68,26 @@ const Today =()=> {
           <nav className='h-10 border-t flex items-center justify-between rounded-b-lg'>
 
             {/* MORE COVERAGE BUTTON  */}
+            {!isCoverageMenuOpen && ''}
             <NavLink  to={`/`}
-                      onClick={()=> setCoverageMenu(!isCoverageMenuOpen)}
+                      onClick={()=> {
+                        setCoverageMenu(!isCoverageMenuOpen)
+                        console.log('clicked the button')
+                      }}
                       className={`relative flex items-center justify-center ${isCoverageMenuOpen? 'rounded-b-lg bg-slate-500/70': 'rounded-full'} bg-slate-500 px-4 mx-3 text-white text-md font-black`}>
               {isCoverageMenuOpen? 'CLOSE': `More coverage >` }
 
               {/* MENU CONTAINER */}
               {
                 isCoverageMenuOpen &&
-                  <ul className='absolute flex flex-col place-content-around left-0 bottom-6 h-auto w-96 bg-slate-500/70 backdrop-blur-sm pt-6 px-6 py-2 rounded-t-lg rounded-br-lg '>
+                  <ul className='absolute flex flex-col place-content-around left-0 bottom-6 h-auto w-96 bg-slate-100/70 dark:bg-slate-500/70 backdrop-blur-sm pt-6 px-6 py-2 rounded-t-lg rounded-br-lg border-2 border-slate-300/50 ' onClick={(evt)=> {
+                    evt.stopPropagation();
+                    evt.preventDefault()
+                    console.log('clicked the ul')
+                  }}>
 
                     { mainHeadline?.des_facet.map((el, index)=> {
-                      return <li key={index} className='w-full flex justify-center items-center h-12 mb-2 rounded-lg bg-slate-500/300 backdrop-blur-md hover:border-b-1 hover:border-white'>{el}</li>
+                      return <li key={index} className='w-full flex flex-wrap justify-center items-center h-12 mb-2 rounded-lg bg-slate-500/20 backdrop-blur-sm border border-b-slate-300/80 border-t-white text-slate-600 font-extrabold dark:text-white dark:bg-slate-500/30  hover:border-b-1 hover:border-white'>{el}</li>
                     })}
 
                   </ul>
