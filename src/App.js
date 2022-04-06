@@ -9,7 +9,6 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Today />}/>
-        <Route path='/today' element={<Today />} />
         <Route path='/sections' element={<Sections />} />
         <Route path='/popular' element={<Popular />} />
         <Route path='/bookmarks' element={<Bookmarks />} />
