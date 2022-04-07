@@ -9,11 +9,9 @@ const SpecialCoverage =()=> {
   useEffect(()=> {
     const getSearchTerm =async ()=> {
       try {
-        const res  = await axios.get(`http://api.nytimes.com/svc/semantic/v2/concept/search.json?query=${searchTerm}&fields=article_list&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`)
-        // const { response } = data
-        // const { docs } = response;
+        const res = await axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=(${searchTerm}&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`)
 
-        console.log('RESPONSE -> ', res)
+        console.log(res)
 
       } catch (err) {
         if(err) console.log(err)
