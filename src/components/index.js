@@ -6,6 +6,7 @@ import MobileMenuButton from './MobileMenuButton';
 import Popular from './Popular';
 import Search from './Search';
 import Sections from './Sections';
+import SpecialCoverage from './SpecialCoverage'
 import Today from './Today';
 
 export {
@@ -17,5 +18,6 @@ export {
   Popular,
   Search,
   Sections,
+  SpecialCoverage,
   Today
 }
